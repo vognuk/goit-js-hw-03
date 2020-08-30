@@ -8,25 +8,13 @@
 
 const getAllPropValues = (array, prop) => {
     'use strict';
-    // Write code under this line 
-    const allKeys =  Object.entries(array);
-    let arr = [];
 
-    Object.entries(array).forEach(element => {
-        // console.log(element);
-        // for (let item in element) {
-        //  if (element.includes(prop)) {
-        //     arr = arr.push(e);
-        //     console.log(arr);
-        //   } 
-        // }  
-
-        if (element.hasOwnProperty(prop)){
-            console.log(100);
-        }
-    }); 
-
-    return arr;
+    const valuesArray = [];
+    for (let i = 0; i < array.length; i += 1) {
+      array[i][prop] ? valuesArray.push(array[i][prop]) : "";
+    }
+    debugger;
+    return valuesArray;
 };
   
   // Объекты и ожидаемый результат
@@ -43,9 +31,9 @@ const getAllPropValues = (array, prop) => {
 //   console.log(getAllPropValues(products, 'name'));
   // ['Радар', 'Радар', 'Радар', 'Сканер', 'Сканер', 'Дроид', 'Захват']
   
-  console.log(getAllPropValues(products, 'quantity'));
+//   console.log(getAllPropValues(products, 'quantity'));
   // [4, 2, 1, 1, 3, 7, 2]
   
-  //console.log(getAllPropValues(products, 'category'));
+//   console.log(getAllPropValues(products, 'category'));
   //  []
   
